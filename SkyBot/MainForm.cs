@@ -11,6 +11,8 @@ namespace SkyBot
 {
     public partial class MainForm : Form
     {
+        static ClassIRC SkyBot;
+
         public MainForm()
         {
             InitializeComponent();
@@ -19,6 +21,12 @@ namespace SkyBot
         private void MainForm_Load(object sender, EventArgs e)
         {
 
+        }
+
+        private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            Settings Settings = new Settings();
+            Settings.Show();
         }
     }
 }
