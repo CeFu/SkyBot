@@ -15,7 +15,7 @@ namespace SkyBot
     {
         static XmlTextReader xreader;
         static XmlTextWriter xwriter;
-        string SettingsFile = "settings.xml";
+        public string SettingsFile = "settings.xml";
 
         public void XMLInt()
         {

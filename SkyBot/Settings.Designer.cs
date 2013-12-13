@@ -35,7 +35,8 @@
             this.LabelUserName = new System.Windows.Forms.Label();
             this.tbUsername = new System.Windows.Forms.TextBox();
             this.LabelPassword = new System.Windows.Forms.Label();
-            this.tbPasword = new System.Windows.Forms.TextBox();
+            this.tbAuth = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -54,6 +55,7 @@
             this.tbServer.Name = "tbServer";
             this.tbServer.Size = new System.Drawing.Size(100, 20);
             this.tbServer.TabIndex = 1;
+            this.tbServer.TextChanged += new System.EventHandler(this.tbServer_TextChanged);
             // 
             // BtnSave
             // 
@@ -67,7 +69,8 @@
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.tbPasword);
+            this.groupBox1.Controls.Add(this.label1);
+            this.groupBox1.Controls.Add(this.tbAuth);
             this.groupBox1.Controls.Add(this.LabelPassword);
             this.groupBox1.Controls.Add(this.tbUsername);
             this.groupBox1.Controls.Add(this.LabelUserName);
@@ -95,6 +98,7 @@
             this.tbUsername.Name = "tbUsername";
             this.tbUsername.Size = new System.Drawing.Size(100, 20);
             this.tbUsername.TabIndex = 3;
+            this.tbUsername.TextChanged += new System.EventHandler(this.tbUsername_TextChanged);
             // 
             // LabelPassword
             // 
@@ -105,12 +109,22 @@
             this.LabelPassword.TabIndex = 4;
             this.LabelPassword.Text = "Twitch Auth:";
             // 
-            // tbPasword
+            // tbAuth
             // 
-            this.tbPasword.Location = new System.Drawing.Point(105, 72);
-            this.tbPasword.Name = "tbPasword";
-            this.tbPasword.Size = new System.Drawing.Size(288, 20);
-            this.tbPasword.TabIndex = 5;
+            this.tbAuth.Location = new System.Drawing.Point(105, 72);
+            this.tbAuth.Name = "tbAuth";
+            this.tbAuth.Size = new System.Drawing.Size(288, 20);
+            this.tbAuth.TabIndex = 5;
+            this.tbAuth.TextChanged += new System.EventHandler(this.tbAuthPassword_TextChanged);
+            // 
+            // label1
+            // 
+            this.label1.AutoSize = true;
+            this.label1.Location = new System.Drawing.Point(285, 189);
+            this.label1.Name = "label1";
+            this.label1.Size = new System.Drawing.Size(35, 13);
+            this.label1.TabIndex = 6;
+            this.label1.Text = "label1";
             // 
             // Settings
             // 
@@ -136,7 +150,8 @@
         private System.Windows.Forms.GroupBox groupBox1;
         private System.Windows.Forms.TextBox tbUsername;
         private System.Windows.Forms.Label LabelUserName;
-        private System.Windows.Forms.TextBox tbPasword;
+        private System.Windows.Forms.TextBox tbAuth;
         private System.Windows.Forms.Label LabelPassword;
+        private System.Windows.Forms.Label label1;
     }
 }
