@@ -17,13 +17,32 @@ namespace SkyBot
         static XmlTextWriter xwriter;
         string SettingsFile = "settings.xml";
 
+        public void XMLInt()
+        {
+            XMLCheck();
+        }
+
         public void XMLCheck()
         {
             try
             {
                 if (!File.Exists(SettingsFile))
                 {
-                   
+                    xwriter = new XmlTextWriter(SettingsFile, null);
+                    xwriter.Formatting = Formatting.Indented;
+                    xwriter.WriteStartDocument();
+                    xwriter.WriteStartElement("settings");
+                    xwriter.WriteStartElement("twitch_server");
+                    xwriter.WriteAttributeString("value", null);
+                    xwriter.WriteEndElement();
+                    xwriter.WriteStartElement("twitch_name");
+                    xwriter.WriteAttributeString("value", null);
+                    xwriter.WriteEndElement();
+                    xwriter.WriteStartElement("twitch_auth");
+                    xwriter.WriteAttributeString("value", null);
+                    xwriter.WriteEndElement();
+                    xwriter.WriteEndDocument();
+                    xwriter.Close();
                 }
             }
 

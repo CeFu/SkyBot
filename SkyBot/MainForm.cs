@@ -26,13 +26,18 @@ namespace SkyBot
 
         private void MainForm_Load(object sender, EventArgs e)
         {
-            XML.XMLCheck();
+            XML.XMLInt();
         }
 
         private void settingsToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             Settings Settings = new Settings();
             Settings.Show();
+        }
+
+        private void exitToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Close();
         }
     }
 }

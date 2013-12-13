@@ -20,5 +20,10 @@ namespace SkyBot
         {
 
         }
+
+        private void BtnSave_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
